@@ -1,0 +1,14 @@
+{
+  "wines": [
+    {
+      "id": 1,
+      "name": "Sangovese",
+      "description": "Goes well with tomato sauce"
+    },
+    {
+      "id": 2,
+      "name": "Nebbiolo",
+      "description": "Dishes like truffle risotto are a revelation"
+    }
+  ]
+}

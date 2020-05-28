@@ -1,0 +1,13 @@
+{
+  "title": "wines",
+  "description": "Add your personal wine suggestions",
+  "type": "object",
+  "id": "number",
+  "name": "string",
+  "properties": {
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": ["name"]
+}

@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Wine Pairing</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>courses web-app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <link rel="stylesheet" href="./style.css">
+  <body>
+    <div>
+      <h1>Wine Pairing</h1>
+      <p>
+        Find a wine that goes well with a food. Food can be a dish name
+        ("steak"), an ingredient name ("salmon"), or a cuisine ("italian").
+      </p>
+    </div>
+    <div>
+      <input id="search" value="" /><button id="getPairing">
+        Search
+      </button>
+    </div>
+    <div id="output">
+      <p id="pairedWines"></p>
 
-</head>
+      <p id="pairingText"></p>
+    </div>
+    <a href id="sourceLink"></a>
 
-<body>
-  <div id='root'></div>
+    <form id="save-form">
+      <input id="file-name" name="fileName" placeholder="Add Wine" />
+      <button id="save-button">Save Wine</button>
+    </form>
+    <textarea
+      id="file-text"
+      name="fileText"
+      class="editor"
+      form="save-form"
+    ></textarea>
+    <details open>
+      <summary>open a file</summary>
+      <div id="files-list-container"></div>
+    </details>
 
-  <script src='./app/init.js'></script>
-</body>
-
+    <script src="./app/init.js"></script>
+  </body>
 </html>
