@@ -5,6 +5,9 @@
     <title>Wine Pairing</title>
 
     <link rel="stylesheet" href="./style.css" />
+
+    <script src="./app/actions.js"></script>
+    <script src="./app/views.js"></script>
   </head>
 
   <body>
@@ -28,12 +31,12 @@
     <a href id="sourceLink"></a>
 
     <form id="save-form">
-      <input id="file-name" name="fileName" placeholder="Add Wine" />
+      <input name="wineName" id="file-name" placeholder="Add Wine" />
       <button id="save-button">Save Wine</button>
     </form>
     <textarea
+      name="wineText"
       id="file-text"
-      name="fileText"
       class="editor"
       form="save-form"
     ></textarea>

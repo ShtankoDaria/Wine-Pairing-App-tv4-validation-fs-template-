@@ -1,3 +1,31 @@
+fetch("/api/wines", {
+  method: "POST",
+  body: JSON.stringify(),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",
+  },
+})
+  .then((res) => {
+    if (!res.ok) {
+      throw res;
+    }
+    return res.json();
+  })
+  .then((wines) => {
+    renderFilesList(wines);
+    if (wines.length > 0) {
+      fetchAndLoadFile(wines[0]);
+    }
+  })
+  .catch((err) => console.log(err));
+
+document.getElementById("save-button").addEventListener("click", (e) => {
+  const fileNameToSave = e.target.form.wineName.value;
+  const fileTextToSave = e.target.form.wineText.value;
+  saveFile(fileNameToSave, fileTextToSave);
+  e.preventDefault();
+});
+
 document.getElementById("getPairing").addEventListener("click", getPairing);
 
 async function getPairing() {

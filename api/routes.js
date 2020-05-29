@@ -4,7 +4,8 @@ const express = require("express");
 const router = express.Router();
 
 //router.get("/", controllers.hello);
-router.post("/wines", controllers.create);
+router.get("/wines", controllers.readDir);
+router.post("/wines", controllers.writeFile);
 
 // write your routes
 
